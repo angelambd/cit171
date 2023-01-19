@@ -51,11 +51,22 @@ function userlogin(){
     setusername();
     $.ajax({
         type: 'POST',
-        url: 'https://dev.stedi.me/login', //angela update
+        url: 'https://dev.stedi.me/login', 
         data: JSON.stringify({userName, password}),
         success: function(data) {
             window.location.href = "/timer.html#"+data;//add the token to the url
         },
+        contentType: "application/text",
+        dataType: 'text'
+    });
+
+}
+
+function oneTimePassword(){
+    $.ajax({
+        type: 'POST',
+        url: 'https://dev.stedi.me/twofactorlogin/6617534324', //angela update
+        data: JSON.stringify({userName, password}),
         contentType: "application/text",
         dataType: 'text'
     });
