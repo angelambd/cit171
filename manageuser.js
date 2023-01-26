@@ -10,7 +10,7 @@ function setusername(){
 }
 
 function setuserpassword(){
-    password = $("#password").val();
+    password = $("#password").val(); // erased certain commands
 }
  
 function setverifypassword(){
